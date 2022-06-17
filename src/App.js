@@ -30,7 +30,7 @@ class App extends Component {
     }
 
     if (values.password.length < 6) {
-      error.password = "Please neter at least 6 elements!";
+      error.password = "Please enter at least 6 elements!";
     }
 
     return error;
