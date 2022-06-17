@@ -44,7 +44,7 @@ body {
 }
 .header-container {
   text-align: center;
-  width: 400px;
+  /* width: 400px; */
 }
 .header-container > div {
   font-size: 50px;

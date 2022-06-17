@@ -18,12 +18,21 @@ class App extends Component {
     if (!values.name) {
       error.name = "Please enter your name!";
     }
+
     if (!values.email) {
       error.email = "Please enter your email!";
+    } else if (!/^[A-Za-z]+\w*@\w+\.[A-Za-z]+/.test(values.email)) {
+      error.email = "Your email does not look valid!";
     }
+
     if (!values.password) {
       error.password = "Please enter your password!";
     }
+
+    if (values.password.length < 6) {
+      error.password = "Please neter at least 6 elements!";
+    }
+
     return error;
   }
   onSubmit(values) {
@@ -77,7 +86,7 @@ class App extends Component {
                     name="email"
                     id="input-email"
                   />
-                  <ErrorMessage name="email"  className="error"/>
+                  <ErrorMessage name="email" className="error" />
 
                   <label htmlFor="password">Password</label>
                   <Field
